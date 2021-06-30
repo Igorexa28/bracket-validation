@@ -34,9 +34,9 @@
                     .set("[", "]")
                     .set("(", ")");
 
-                const keys = Array.from(map.keys()), 
-                    values = Array.from(map.values()),
-                    union = keys.concat(values);
+                const keys = Array.from(map.keys()); 
+                const values = Array.from(map.values());
+                const union = keys.concat(values);
 
                 try {
                     for (let i = 0; i < this.string.length; i++) {
@@ -51,8 +51,8 @@
                 if (this.string.length === 0) {
                     return 'Empty input';
                 } else {
-                    const elementsOfStr = this.string.split(''),
-                        temporalStorage = [];
+                    const elementsOfStr = this.string.split('');
+                    const temporalStorage = [];
 
                     for (let i = 0 ; i < elementsOfStr.length; i++) {
                         let element  = elementsOfStr[i];
