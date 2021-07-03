@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#backBlock {
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#backBtn {
+    color: #fff;
+    font-size: 24px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background-color: #000;
+    transition: all .3s linear;
+    box-shadow: 0 1px 5px 1px grey;
+}
+
+#backBtn:hover {
+    color: #000;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 3px 5px 1px grey;
+}

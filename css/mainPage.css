@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+html {
+    background-color: #CDDAEA;
+}
+
+.contentDiv {
+    display: flex;
+    flex-direction: column;
+    width: 740px;
+    height: 450px;
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 1, 0.15);
+}
+
+form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+#result {
+    font-weight: bold;
+}
+
+#giveResult {
+    width: 300px;
+    outline: none;
+}
+
+.resultDiv {
+    visibility: hidden;
+}
+
+form > div:nth-child(2n) > input {
+    outline: none;
+    margin-top: 60px;
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    transition: all .3s linear;
+    box-shadow: 0 2px 3px 1px rgb(175, 174, 174);
+}
+
+form > div:nth-child(2n) > input:hover {
+    box-shadow: 0 4px 3px 1px rgb(175, 174, 174);
+}
+
+form > div:nth-child(2n) > input:focus {
+    box-shadow: 0 6px 3px 1px rgb(175, 174, 174);
+}
+
+form > div:nth-child(3n) {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+form > div:last-child > button {
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all .3s linear;
+    background-color: #000000;
+    border: 1px solid #000000;
+    box-shadow: 0 1px 5px 1px grey;
+}
+
+form > div:last-child > button:hover {
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 3px 5px 1px grey;
+}
+
+.contentDiv > div:last-child {
+    align-self: flex-end;
+    margin-right: 7px;
+    margin-bottom: 15px;
+}
+
+#toTests {
+    outline: none;
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background-color: #000;
+    transition: all .3s linear;
+    box-shadow: 0 1px 5px 1px grey;
+}
+
+#toTests:hover {
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 3px 5px 1px grey;
+}

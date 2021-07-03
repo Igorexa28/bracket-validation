@@ -4,7 +4,7 @@ describe("Brackets balance verification tests: ", function() {
         assert.equal(testFunction("{[()]}"), -1);
     });
 
-    it("Checking for balance of brackets: {[(]}", function() {
+    it("Checking for balance of brackets without one closing bracket: {[(]}", function() {
         assert.equal(testFunction("{[(]}"), 3);
     });
 
@@ -24,7 +24,7 @@ describe("Brackets balance verification tests: ", function() {
         assert.equal(testFunction("{[{([(())])}]}"), -1);
     });
 
-    it("Checking for balance of brackets with symbol and without one bracket: {[[((z{)}))]]}", function() {
+    it("Checking for balance of brackets with one symbol - z and without one opening bracket: {[[((z{)}))]]}", function() {
         assert.equal(testFunction("{[[((z{)}))]]}"), "IllegalArgumentException");
     });
 
@@ -32,31 +32,27 @@ describe("Brackets balance verification tests: ", function() {
         assert.equal(testFunction(""), "Empty input");
     });
 
-    it(`Checking for balance in brackets, beginning with closing bracket: }()`, function() {
+    it(`Checking for balance of brackets, which begin with closing bracket: }()`, function() {
         assert.equal(testFunction("}()"), 1);
     });
 
-    it(`Checking for balance in brackets: (){}`, function() {
+    it(`Checking for balance of brackets: (){}`, function() {
         assert.equal(testFunction("(){}"), -1);
     });
     
-    it(`Checking for balance in brackets: [{}([]{})]`, function() {
+    it(`Checking for balance of brackets: [{}([]{})]`, function() {
         assert.equal(testFunction("[{}([]{})]"), -1);
     });
 
-    it(`Checking for balance in brackets: [{}([]{})]`, function() {
+    it(`Checking for balance of brackets: {([{}({[()]}{()})])}`, function() {
         assert.equal(testFunction("[{}([]{})]"), -1);
     });
 
-    it(`Checking for balance in brackets: {([{}({[()]}{()})])}`, function() {
-        assert.equal(testFunction("[{}([]{})]"), -1);
-    });
-
-    it(`Checking for balance in brackets: ({([{}({[()]}{()})])}{([{}({[({)]}{()})])})`, function() {
+    it(`Checking for balance of brackets without one closing bracket: ({([{}({[()]}{()})])}{([{}({[({)]}{()})])})`, function() {
         assert.equal(testFunction("({([{}({[()]}{()})])}{([{}({[({)]}{()})])})"), 31);
     });
 
-    it(`Checking for balance in brackets, beginning with closing bracket: }()`, function() {
+    it(`Checking for balance of brackets, beginning with closing bracket: }[{}([]{})]`, function() {
         assert.equal(testFunction("}[{}([]{})]"), 1);
     });
 });
